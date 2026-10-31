@@ -1,0 +1,230 @@
+.contact-page {
+  background: #ffffff;
+}
+
+.contact-hero-banner {
+  background: linear-gradient(
+      180deg,
+      rgba(7, 13, 20, 0.75) 0%,
+      rgba(7, 13, 20, 0.95) 100%
+    ),
+    url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80')
+    center 35%/cover no-repeat;
+}
+
+.contact-main-section {
+  padding: 100px 0;
+  background-color: var(--light-bg);
+}
+
+.contact-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.contact-intro {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.c-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+}
+
+.c-info-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 157, 95, 0.4);
+  box-shadow: var(--shadow-hover);
+}
+
+.c-icon-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #faf7f0;
+  border: 1px solid rgba(197, 157, 95, 0.25);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.c-info-card h4 {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.c-info-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.timing-note {
+  display: block;
+  font-size: 12px;
+  color: var(--primary-gold);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.whatsapp-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #0f2216;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.wa-icon {
+  font-size: 28px;
+}
+
+.whatsapp-box h5 {
+  font-size: 16px;
+  color: #25d366;
+  margin-bottom: 4px;
+}
+
+.whatsapp-box p {
+  font-size: 13px;
+  color: #bbf7d0;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.wa-link {
+  display: inline-block;
+  background: #25d366;
+  color: #062b14 !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.wa-link:hover {
+  background: #1eb855;
+  transform: translateY(-2px);
+}
+
+/* Form Column */
+.contact-form-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 44px 38px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-wrapper h3 {
+  font-size: 24px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.contact-form-wrapper p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.contact-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.contact-form-fields select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  font-size: 13.5px;
+  background: #ffffff;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-form-fields select:focus {
+  border-color: var(--primary-gold);
+}
+
+.contact-success-banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-check {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.contact-success-banner h4 {
+  font-size: 20px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.contact-success-banner p {
+  color: #64748b;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+}
