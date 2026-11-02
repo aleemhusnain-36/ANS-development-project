@@ -8,7 +8,6 @@ import Contact from '../pages/Frontend/Contact/Contact';
 import Auth from '../pages/Auth/Auth';
 import UserDashboard from '../pages/Dashboard/UserDashboard';
 import AdminDashboard from '../pages/Dashboard/AdminDashboard';
-import PortalsHub from '../pages/Portals/PortalsHub';
 
 const Routing = () => {
   return (
@@ -21,16 +20,16 @@ const Routing = () => {
       <Route path="/projects/:id" element={<ProjectDetails />} />
       <Route path="/contact" element={<Contact />} />
 
-      {/* Portals Hub Gateway */}
-      <Route path="/portals" element={<PortalsHub />} />
-      <Route path="/portal" element={<PortalsHub />} />
+      {/* Redirect old portal links directly to user dashboard */}
+      <Route path="/portals" element={<Navigate to="/dashboard/user" replace />} />
+      <Route path="/portal" element={<Navigate to="/dashboard/user" replace />} />
 
       {/* Auth Routes */}
       <Route path="/auth" element={<Auth />} />
       <Route path="/login" element={<Auth />} />
       <Route path="/register" element={<Auth />} />
 
-      {/* Dashboards & Portals */}
+      {/* Dashboards */}
       <Route path="/dashboard/user" element={<UserDashboard />} />
       <Route path="/dashboard/admin" element={<AdminDashboard />} />
       <Route path="/portal/user" element={<UserDashboard />} />

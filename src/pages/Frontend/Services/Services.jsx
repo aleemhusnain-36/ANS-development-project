@@ -30,11 +30,6 @@ export default function Services() {
       <section className="page-hero-banner services-hero-banner">
         <div className="banner-content" data-aos="fade-up">
           <h1 className="banner-title">Our Services</h1>
-          <div className="banner-breadcrumb">
-            <Link to="/">Home</Link>
-            <span>/</span>
-            <span className="current">Services</span>
-          </div>
         </div>
       </section>
 

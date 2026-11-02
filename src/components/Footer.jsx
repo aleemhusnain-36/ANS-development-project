@@ -48,8 +48,7 @@ export default function Footer() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/portals">Portals Gateway</Link></li>
+              <li><Link to="/projects">Properties</Link></li>
               <li><Link to="/dashboard/user">Customer Portal</Link></li>
               <li><Link to="/dashboard/admin">Admin Portal</Link></li>
             </ul>

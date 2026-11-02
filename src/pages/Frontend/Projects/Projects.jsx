@@ -53,11 +53,6 @@ export default function Projects() {
       <section className="page-hero-banner projects-hero-banner">
         <div className="banner-content" data-aos="fade-up">
           <h1 className="banner-title">Our Properties</h1>
-          <div className="banner-breadcrumb">
-            <Link to="/">Home</Link>
-            <span>/</span>
-            <span className="current">Properties</span>
-          </div>
         </div>
       </section>
 

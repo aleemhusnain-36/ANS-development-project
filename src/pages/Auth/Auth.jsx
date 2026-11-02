@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/slices/authSlice";
 import Navbar from "../../components/Navbar";
 import "./Auth.css";
 
@@ -10,15 +12,30 @@ export default function Auth() {
   const [name, setName] = useState("Aleem Khan");
   const [phone, setPhone] = useState("+92 300 1234567");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    // Default logged in as user Aleem
-    navigate("/dashboard/user");
+    dispatch(login({
+      email,
+      name: email.includes("admin") ? "Admin Manager" : (name || "Aleem Khan"),
+      role: email.includes("admin") ? "System Administrator" : "Premium Investor"
+    }));
+    if (email.toLowerCase().includes("admin")) {
+      navigate("/dashboard/admin");
+    } else {
+      navigate("/dashboard/user");
+    }
   };
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
+    dispatch(login({
+      name: name || "New Member",
+      email: email || "user@ansdevelopers.com",
+      phone: phone || "+92 300 0000000",
+      role: "Client Member"
+    }));
     navigate("/dashboard/user");
   };
 
@@ -113,16 +130,38 @@ export default function Auth() {
 
               {/* Demo Quick Navigation Links */}
               <div className="demo-shortcuts-box">
-                <span className="demo-shortcuts-title">Quick Demo Portals:</span>
+                <span className="demo-shortcuts-title">Quick Demo Logins:</span>
                 <div className="demo-btn-group">
-                  <Link to="/dashboard/user" className="demo-link-btn">
+                  <button 
+                    type="button" 
+                    className="demo-link-btn"
+                    onClick={() => {
+                      dispatch(login({
+                        name: "Aleem Khan",
+                        email: "aleem@example.com",
+                        role: "Premium Investor"
+                      }));
+                      navigate("/dashboard/user");
+                    }}
+                  >
                     <i className="fa-solid fa-user-tie" style={{ marginRight: "6px" }}></i>
-                    Customer Portal (Aleem) →
-                  </Link>
-                  <Link to="/dashboard/admin" className="demo-link-btn admin">
+                    Login as Customer (Aleem) →
+                  </button>
+                  <button 
+                    type="button" 
+                    className="demo-link-btn admin"
+                    onClick={() => {
+                      dispatch(login({
+                        name: "Administrator",
+                        email: "admin@ansdevelopers.com",
+                        role: "System Administrator"
+                      }));
+                      navigate("/dashboard/admin");
+                    }}
+                  >
                     <i className="fa-solid fa-shield-halved" style={{ marginRight: "6px" }}></i>
-                    Admin Portal →
-                  </Link>
+                    Login as Admin →
+                  </button>
                 </div>
               </div>
             </form>

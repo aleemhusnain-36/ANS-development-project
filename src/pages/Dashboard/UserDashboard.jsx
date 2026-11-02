@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import AOS from "aos";
 import Counter from "../../components/Counter";
-import { selectCurrentUser, updateProfile } from "../../redux/slices/authSlice";
+import { selectCurrentUser, updateProfile, logout } from "../../redux/slices/authSlice";
 import { selectUserBookings } from "../../redux/slices/bookingsSlice";
 import { selectRentProperties, setListingType } from "../../redux/slices/projectsSlice";
 import "./Dashboard.css";
 
 export default function UserDashboard() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const currentUser = useSelector(selectCurrentUser);
   const userBookings = useSelector(selectUserBookings);
   const rentProperties = useSelector(selectRentProperties);
@@ -99,10 +100,18 @@ export default function UserDashboard() {
             <span>Switch to Admin View</span>
             <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "4px" }}></i>
           </Link>
-          <Link to="/auth" className="sidebar-logout-btn">
+          <button 
+            type="button" 
+            className="sidebar-logout-btn"
+            style={{ width: "100%", background: "none", border: "none", textAlign: "left", cursor: "pointer" }}
+            onClick={() => {
+              dispatch(logout());
+              navigate("/auth");
+            }}
+          >
             <i className="fa-solid fa-right-from-bracket"></i>
             <span>Logout</span>
-          </Link>
+          </button>
         </div>
       </aside>
 

@@ -43,11 +43,6 @@ export default function About() {
         <div className="banner-overlay"></div>
         <div className="banner-content" data-aos="fade-up">
           <h1 className="banner-title">About Us</h1>
-          <div className="banner-breadcrumb">
-            <Link to="/">Home</Link>
-            <span>/</span>
-            <span className="current">About</span>
-          </div>
         </div>
       </section>
 
