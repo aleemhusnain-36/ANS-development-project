@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="ans-footer">
       <div className="footer-top-accent"></div>
-      
+
       <div className="footer-main">
         <div className="footer-grid">
           {/* Brand Info */}
@@ -32,9 +32,6 @@ export default function Footer() {
               <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="social-icon">
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="social-icon">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
               <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" className="social-icon">
                 <i className="fa-brands fa-youtube"></i>
               </a>
@@ -50,7 +47,6 @@ export default function Footer() {
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/projects">Properties</Link></li>
               <li><Link to="/dashboard/user">Customer Portal</Link></li>
-              <li><Link to="/dashboard/admin">Admin Portal</Link></li>
             </ul>
           </div>
 
@@ -74,19 +70,19 @@ export default function Footer() {
                 <span className="contact-icon">
                   <i className="fa-solid fa-phone"></i>
                 </span>
-                <span>+92 300 0000000</span>
+                <span>+92 319 7015696</span>
               </li>
               <li>
                 <span className="contact-icon">
                   <i className="fa-solid fa-envelope"></i>
                 </span>
-                <span>info@ansdevelopers.com</span>
+                <span>ansdevelopment41@gmail.com</span>
               </li>
               <li>
                 <span className="contact-icon">
                   <i className="fa-solid fa-location-dot"></i>
                 </span>
-                <span>Gulberg III, Lahore, Pakistan</span>
+                <span>Defence View Extension block Jaranwala,Faisalabad</span>
               </li>
               <li>
                 <span className="contact-icon">

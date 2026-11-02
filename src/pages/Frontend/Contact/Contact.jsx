@@ -71,7 +71,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4>Corporate Headquarters</h4>
-                    <p>ANS Developers Tower, Main Boulevard, Gulberg III, Lahore, Pakistan</p>
+                    <p>ANS Development & Maintenance, Defence View Extension Block, Jaranwala, 37250, Pakistan</p>
                   </div>
                 </div>
 
@@ -81,7 +81,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4>Phone & WhatsApp</h4>
-                    <p>+92 300 0000000 / +92 42 35780000</p>
+                    <p>+92 319 7015696 / +92 339 9133026</p>
                     <span className="timing-note">
                       <i className="fa-solid fa-clock" style={{ marginRight: "4px" }}></i> Available Mon - Sat (9:00 AM - 7:00 PM)
                     </span>
@@ -94,7 +94,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4>Email Inquiries</h4>
-                    <p>info@ansdevelopers.com / sales@ansdevelopers.com</p>
+                    <p>ansdevelopment41@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function Contact() {
                 <div>
                   <h5>Instant WhatsApp Assistance</h5>
                   <p>Chat directly with our senior property consultant for quick rate lists and brochures.</p>
-                  <a href="https://wa.me/923000000000" target="_blank" rel="noreferrer" className="wa-link">
+                  <a href="https://wa.me/923197015696" target="_blank" rel="noreferrer" className="wa-link">
                     <span>Open WhatsApp Chat</span>
                     <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: "6px" }}></i>
                   </a>
@@ -200,6 +200,27 @@ export default function Contact() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* OFFICE LOCATION MAP */}
+      <section className="contact-map-section">
+        <div className="contact-map-header" data-aos="fade-up">
+          <span className="section-tag">• FIND US ON MAP •</span>
+          <h2 className="section-title">Visit Our Office</h2>
+          <p className="section-subtitle">ANS Development &amp; Maintenance — Faisalabad, Pakistan</p>
+        </div>
+        <div className="contact-map-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.1859964121554!2d73.4065690093088!3d31.32623605660396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39227fcc7ab0a853%3A0x84b4905b21e62381!2sANS%20Development%20%26%20Maintenance!5e0!3m2!1sen!2s!4v1793633889438!5m2!1sen!2s"
+            width="100%"
+            height="480"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="ANS Development & Maintenance Location"
+          ></iframe>
         </div>
       </section>
 
